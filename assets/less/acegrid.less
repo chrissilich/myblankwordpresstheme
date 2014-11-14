@@ -1,0 +1,30 @@
+
+.acegrid-container() {
+	width: 100%;
+	overflow: hidden;
+}
+
+.acegrid-inner(@padPercent: 3, @cols: 4) {
+	position: relative;
+	width: 100% + percentage(@padPercent/100);
+	left: -@padPercent/2%;
+	text-align: center;
+	line-height: 0px; // removes that weird whitespace under inline-block elements 
+}
+
+.acegrid-item(@padPercent: 3, @cols: 4) {
+	position: relative;
+	display: inline-block;
+	zoom: 1; // IE7 hack
+	*display: inline; // IE7 hack
+	width: (100%/@cols) - percentage(@padPercent/(100+@padPercent));
+	margin: 0 percentage(@padPercent/(100+@padPercent)/2) percentage(@padPercent/(100+@padPercent)) percentage(@padPercent/(100+@padPercent)/2);
+	line-height: 120%; // back to (something close to) default
+	vertical-align: top;
+}
+
+.acegrid-item-square(@padPercent: 3, @cols: 4) {
+	height: 0;
+	padding-bottom: (100%/@cols) - percentage(@padPercent/(100+@padPercent));;
+}
+

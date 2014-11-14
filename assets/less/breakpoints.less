@@ -1,0 +1,22 @@
+
+
+@phone: 767px;
+@small: 959px;
+@medium: 1199px;
+@large: 1200px;
+
+
+
+@media screen and (max-width: @phone) {
+	// all phones
+}
+@media screen and (min-width: @phone + 1) and (max-width: @small) {
+	// tablet to normal desktop
+}
+@media screen and (min-width: @small + 1) and (max-width: @medium) {
+	// don't use this size. your default styles 
+	// (not in a breakpoint) should represent this range
+}
+@media screen and (min-width: @large + 1) {
+	// huge screens
+}

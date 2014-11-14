@@ -3,7 +3,7 @@
 <section id="content" role="main">
 <? if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <header class="header">
-<h1 class="entry-title"><? the_title(); ?> <span class="meta-sep">|</span> <a href="<?=get_permalink( $post->post_parent ); ?>" title="<? printf( __( 'Return to %s', 'threetwotwosix' ), esc_html( get_the_title( $post->post_parent ), 1 ) ); ?>" rev="attachment"><span class="meta-nav">&larr; </span><?=get_the_title( $post->post_parent ); ?></a></h1> <? edit_post_link(); ?>
+<h1 class="entry-title"><? the_title(); ?> <span class="meta-sep">|</span> <a href="<?=get_permalink( $post->post_parent ); ?>" title="<? printf( __( 'Return to %s', 'edgarreeves' ), esc_html( get_the_title( $post->post_parent ), 1 ) ); ?>" rev="attachment"><span class="meta-nav">&larr; </span><?=get_the_title( $post->post_parent ); ?></a></h1> <? edit_post_link(); ?>
 <? get_template_part( 'entry', 'meta' ); ?>
 </header>
 <article id="post-<? the_ID(); ?>" <? post_class(); ?>>

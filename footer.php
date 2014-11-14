@@ -1,16 +1,19 @@
+
+
+
 			<div class="clear"></div>
 		</div><!-- #content -->
-		<footer id="footer" role="contentinfo">
-			<div id="copyright">
-				<?=sprintf( 
-					__( '%1$s %2$s %3$s. All Rights Reserved.', 'threetwotwosix' ), 
-					'&copy;', 
-					date( 'Y' ), 
-					esc_html( get_bloginfo( 'name' ) )
-				);  ?>
-			</div>
-		</footer>
-	</div><!-- #pagewrap -->
-	<? wp_footer(); ?>
-</body>
+
+
+		<? wp_footer(); ?>
+
+
+		<script>
+			var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+			g.src='//www.google-analytics.com/ga.js';
+			s.parentNode.insertBefore(g,s)}(document,'script'));
+		</script>
+
+	</body>
 </html>
