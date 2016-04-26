@@ -1,22 +1,42 @@
 
 
-@phone: 767px;
-@small: 959px;
-@medium: 1199px;
-@large: 1200px;
+@tablet: 768px;
+@small: 1000px;
+@medium: 1200px;
+@large: 1440px;
+
+@page_padding: 20px;
 
 
-
-@media screen and (max-width: @phone) {
+@media screen and (max-width: (@tablet - 1)) {
 	// all phones
 }
-@media screen and (min-width: @phone + 1) and (max-width: @small) {
+@media screen and (min-width: @tablet) and (max-width: (@small + @page_padding)) {
 	// tablet to normal desktop
 }
-@media screen and (min-width: @small + 1) and (max-width: @medium) {
-	// don't use this size. your default styles 
-	// (not in a breakpoint) should represent this range
+@media screen and (min-width: (@small + @page_padding + 1)) and (max-width: (@medium + @page_padding)) {
+	// medium screens
+	// don't use this size. your default styles (not in a breakpoint) should represent this range
 }
-@media screen and (min-width: @large + 1) {
+@media screen and (min-width: (@medium + @page_padding + 1)) and (max-width: (@large + @page_padding))  {
+	// large screens
+}
+@media screen and (min-width: (@large + @page_padding + 1)) {
 	// huge screens
+}
+
+
+
+@media screen and (max-width: (@tablet - 1)) {
+
+}
+@media screen and (min-width: @tablet) and (max-width: (@small + @page_padding)) {
+
+}
+
+@media screen and (min-width: (@medium + @page_padding + 1)) and (max-width: (@large + @page_padding))  {
+
+}
+@media screen and (min-width: (@large + @page_padding + 1)) {
+
 }

@@ -1,14 +1,13 @@
-
 .acegrid-container() {
 	width: 100%;
 	overflow: hidden;
 }
 
-.acegrid-inner(@padPercent: 3, @cols: 4) {
+.acegrid-inner(@padPercent: 3, @cols: 4, @align: "center") {
 	position: relative;
 	width: 100% + percentage(@padPercent/100);
-	left: -@padPercent/2%;
-	text-align: center;
+	left: percentage((-@padPercent/2)/100);
+	text-align: @align;
 	line-height: 0px; // removes that weird whitespace under inline-block elements 
 }
 
@@ -27,4 +26,3 @@
 	height: 0;
 	padding-bottom: (100%/@cols) - percentage(@padPercent/(100+@padPercent));;
 }
-

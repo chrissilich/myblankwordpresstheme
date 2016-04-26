@@ -1,3 +1,5 @@
 <? get_header(); ?>
-<? get_sidebar(); ?>
+
+Page not found.<br />
+
 <? get_footer(); ?>
